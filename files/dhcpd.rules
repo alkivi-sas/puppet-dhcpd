@@ -1,0 +1,3 @@
+*filter
+-A INPUT -p udp -m udp --sport 67:68 --dport 67:68 -m comment --comment "dhcp" -j ACCEPT
+COMMIT
