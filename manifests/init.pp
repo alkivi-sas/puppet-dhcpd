@@ -15,7 +15,7 @@ class dhcpd (
 
   if($motd)
   {
-    motd::register{ 'DHCP': }
+    motd::register{ 'DHCP Server': }
   }
 
   validate_string($domain_name)

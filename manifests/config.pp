@@ -4,7 +4,7 @@ class dhcpd::config () {
     owner   => 'root',
     group   => 'root',
     mode    => '0644',
-    notify  => Service[$dhpcd::params::dhcpd_service_name],
+    notify  => Service[$dhcpd::params::dhcpd_service_name],
   }
 
   file {  $dhcpd::params::dhcpd_service_config:
