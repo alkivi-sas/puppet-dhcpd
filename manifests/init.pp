@@ -7,10 +7,9 @@ class dhcpd (
   $range_start,
   $range_end,
   $broadcast,
-  $hosts,
-  $network_prefix,
   $listen_interfaces = ['eth0'],
   $motd              = true,
+  $firewall          = true,
 ) {
 
   if($motd)
@@ -26,8 +25,6 @@ class dhcpd (
   validate_string($range_start)
   validate_string($range_end)
   validate_string($broadcast)
-  validate_hash($hosts)
-  validate_string($network_prefix)
   validate_array($listen_interfaces)
 
 

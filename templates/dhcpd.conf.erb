@@ -18,13 +18,3 @@ subnet <%= @network %> netmask <%= @netmask %> {
 	range <%= @range_start %> <%= @range_end %>;
 	option broadcast-address <%= @broadcast %>;
 }
-
-<% @hosts.each do |name,data| %>
-# <%= data['comment'] %>
-host <%= name %> {
-	hardware ethernet <%= data['mac'] %>;
-	fixed-address <%= @network_prefix %><%= data['ip'] %>;
-}
-
-<% end %>
-

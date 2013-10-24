@@ -1,0 +1,5 @@
+<% if @comment %># <%= @comment %><% end %>
+host <%= @hostname %> {
+    hardware ethernet <%= @mac %>;
+    fixed-address <%= @ip %>;
+}

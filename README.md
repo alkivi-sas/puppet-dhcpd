@@ -16,9 +16,7 @@ class { 'dhcpd':
   broadcast         => '192.168.0.255',
   range_start       => '192.168.0.1',
   range_end         => '192.168.0.100',
-  network_prefix    => '192.168.0',
   listen_interfaces => ['eth0'],
-  hosts             => { 'test' => { 'mac' => '78:2b:cb:9a:06:6b', 'ip' => '.101', 'comment' => 'employee' }, },
 }
 ```
 This will do the typical install, configure and service management. 
@@ -27,8 +25,12 @@ Hosts configuration will move shortly to have indenpendant declaration
 
 ### Host configuration
 
-TODO
-
+```puppet
+dhcpd::host{ 'test':
+  comment => 'This is a test',
+  mac     => 'ff:ff:ff:00:00:00',
+  ip      => '192.168.20.1',
+}
 
 ## Limitations
 
