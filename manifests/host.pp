@@ -25,7 +25,7 @@ define dhcpd::host(
     fail("mac '${mac}' is not a mac address")
   }
 
-  concat::fragment{ "dhcp_host_${hostname}":
+  concat::fragment{ "dhcp_host_${ip}":
     target  => $dhcpd::params::dhcpd_service_config,
     content => template('dhcpd/host.conf.erb'),
     order   => $order,
