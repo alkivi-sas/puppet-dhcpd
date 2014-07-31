@@ -1,5 +1,5 @@
 name    'alkivi-dhcpd'
-version '0.1.0'
+version '0.1.1'
 source 'https://github.com/alkivi-sas/puppet-dhcpd'
 author 'alkivi'
 license 'LGPLv3'

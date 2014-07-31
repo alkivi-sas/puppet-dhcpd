@@ -7,6 +7,8 @@ class dhcpd (
   $range_start,
   $range_end,
   $broadcast,
+  $bootp             = false,
+  $booting           = false,
   $listen_interfaces = ['eth0'],
   $motd              = true,
   $firewall          = true,

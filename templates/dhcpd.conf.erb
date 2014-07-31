@@ -11,8 +11,8 @@ authoritative;
 
 # PXE stuff
 # TODO parametrize this ?
-#allow bootp;
-#allow booting;
+<% if @bootp %>allow bootp;<% else %>#allow bootp;<% end %>
+<% if @booting %>allow booting;<% else %>#allow booting;<% end %>
 
 subnet <%= @network %> netmask <%= @netmask %> {
 	range <%= @range_start %> <%= @range_end %>;
