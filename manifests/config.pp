@@ -1,4 +1,16 @@
-class dhcpd::config () {
+class dhcpd::config (
+    $domain_name       = $dhcpd::domain_name,
+    $dns_servers       = $dhcpd::dns_servers,
+    $routers           = $dhcpd::routers,
+    $bootp             = $dhcpd::bootp,
+    $booting           = $dhcpd::booting,
+    $network           = $dhcpd::network,
+    $netmask           = $dhcpd::netmask,
+    $range_start       = $dhcpd::range_start,
+    $range_end         = $dhcpd::range_end,
+    $broadcast         = $dhcpd::broadcast,
+    $listen_interfaces = $dhcpd::listen_interfaces,
+) {
   File {
     ensure  => present,
     owner   => 'root',
