@@ -5,6 +5,8 @@ class dhcpd::config (
     $bootp             = $dhcpd::bootp,
     $booting           = $dhcpd::booting,
     $network           = $dhcpd::network,
+    $filename          = $dhcpd::filename,
+    $next_server       = $dhcpd::next_server,
     $netmask           = $dhcpd::netmask,
     $range_start       = $dhcpd::range_start,
     $range_end         = $dhcpd::range_end,

@@ -13,6 +13,8 @@ authoritative;
 # TODO parametrize this ?
 <% if @bootp %>allow bootp;<% else %>#allow bootp;<% end %>
 <% if @booting %>allow booting;<% else %>#allow booting;<% end %>
+<% if @filename %>filename "<%= @filename %>";<% end %>
+<% if @next_server %>next-server <%= @next_server %>;<% end %>
 
 subnet <%= @network %> netmask <%= @netmask %> {
 	range <%= @range_start %> <%= @range_end %>;

@@ -9,6 +9,8 @@ class dhcpd (
   $broadcast,
   $bootp             = false,
   $booting           = false,
+  $filename          = false,
+  $next_server       = false,
   $listen_interfaces = ['eth0'],
   $motd              = true,
   $firewall          = true,
